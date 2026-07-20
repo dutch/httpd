@@ -4,3 +4,7 @@ bin_PROGRAMS = %D%/httpd
 if HAVE_SYS_EPOLL_H
 %C%_httpd_SOURCES += %D%/epoll/async.c
 endif
+
+if HAVE_SYS_EVENT_H
+%C%_httpd_SOURCES += %D%/kqueue/async.c
+endif
